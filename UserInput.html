@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title style="color:black">WELCOME</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+</head>
+
+<body style="background-color:LightSeaGreen;">
+  <!-- Hrllo -->
+  <ul>
+    <li><a href="Porject1.html">Home</a></li>
+    <li><a href="Table1.html">Quotation</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <h1 style="text-align: center" color="BLACK" class="w3-animate-opacity">WELCOME</h1>
+  <hr>
+  <div class="container" align="center">
+    <div>
+      <div class="container; col-md-8" align="left" id="form">
+        <h4 style="font-weight: bold">Business Type:</h4>
+        <select id="input1" name="business">
+  <option selected value="Whiteline Technology Co.,Ltd">Whiteline Technology Co., Ltd</option>
+  <!-- <option value="Hollister Co.,Ltd">Hollister Co., Ltd</option>
+  <option value="Nike Co.,Ltd">Nike Co., Ltd</option>
+  <option value="UnderArmour Co.,Ltd">Under Armour Co., Ltd</option> -->
+</select>
+        <p id="demo1" style="display: inline"></p>
+      </div>
+    </div>
+
+
+    <!-- <div class="container; col-sm-2" align="right">
+      <h4 style="font-weight: bold; margin-right: 95px;">Start:</h4>
+      <div class="container">
+    <div class="row">
+        <div class='col-sm-2'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='date' class="form-control" id="date"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="container; col-sm-2" align="right">
+      <h4 style="font-weight: bold; margin-right: 100px;">End:</h4>
+      <div class="container">
+    <div class="row">
+        <div class='col-sm-2'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='date' class="form-control" id="enddate"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div> -->
+    <div class="col-sm-4" style="text-align: left">
+      <h4 style="font-weight: bold">Start - End:</h4>
+    <input id="startEndDate" type="text" name="daterange" style="border-radius: 5px" size="22"/>
+  </div>
+
+
+
+
+    <div style="padding-top: 12%;">
+      <h4 style="font-weight:bold">Transaction Form:</h4>
+      <form>
+        <label class="radio-inline" style="margin-right: 15%">
+      <input id="label" value="Form 1" checked="checked" type="radio" name="optradio">Form 1
+    </label>
+        <label class="radio-inline">
+      <input id="label2" value="Form 2" type="radio" name="optradio">Form 2
+    </label>
+        <p id="demo4" style="display: inline"></p>
+      </form>
+    </div>
+
+    <br>
+
+    <div id="oriDiv" style="margin-top: 25px; margin-bottom: 75px; background-color: white; border-radius: 20px; padding-top: 15px; padding-bottom: 30px; overflow: scroll;" class="col-md-12" align="center">
+      <div class="row-whole" id="addable0" style="display: flex; margin-left: auto; margin-right: auto;">
+        <div id="tranD" style="margin-right: 50px" class="row-element col-md-3">
+          <h4 style="font-weight: bold">Transaction Details:</h4>
+          <select name="transactionDetails" id="selectable_0" onchange="myFilterFunction(id)" class="row-elem">
+    <option value="---Please Select---"selected disabled>---Please Select---</option>
+    <option value="Media Transactions">Media Transactions</option>
+    <option value="Text Transactions">Text Transactions</option>
+    <option value="Comment Transaction">Comment Transaction</option>
+      </select>
+          <p id="demo2" style="display: inline"></p>
+        </div>
+        <br>
+        <br>
+        <div id="tranT" style="margin-right: 50px;" class="row-element col-md-3">
+          <h4 style="font-weight: bold">Transaction Type:</h4>
+          <select name="transactionType" id="tType0" class="row-elem"></select>
+          <p id="demo3" style="display: inline"></p>
+        </div>
+        <br>
+        <div id="inputBox" style="margin-right: 50px" class="row-element col-md-3">
+          <h4 style="font-weight:bold">Quantity:</h4>
+          <input  id="quanValue0" class="row-elem input-sm" style="border-radius:8px">
+        </div>
+        <p id="demo5" style="display: inline"></p>
+        <div class="col-md-3" style="padding-top: 30px">
+          <button id="addButton" type="submit" onclick="duplicate()"><i class="glyphicon glyphicon-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div align="center">
+      <button type="submit" value="Submit" class="btn btn-primary btn-lg" onclick="myReceiptFunction()">
+  Submit
+</button>
+    </div>
+    <br>
+    <br>
+
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="moment.min.js"></script>
+    <script type="text/javascript" src="JavaScriptReceiptFunction.js"></script>
+
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" /> -->
+    <script type="text/javascript">
+
+      // document.getElementById("date").valueAsDate = new Date();
+      // var d = new Date();
+      // console.log(d)
+      // var b= d.setDate(d.getDate() - 1);
+      // document.getElementById("enddate").valueAsDate = new Date(b);
+      //   console.log(new Date(b))
+
+      $(function() {
+    $('input[name="daterange"]').daterangepicker();
+      var dateRange = document.getElementById('startEndDate').value;
+      var startDateIni = dateRange.slice(0,10).replace("/","-").replace("/","-");
+      var endDateIni = dateRange.slice(12,23).replace("/","-").replace("/","-");
+
+      sessionStorage.startDateRangeVal = JSON.stringify(startDateIni);
+      sessionStorage.endDateRangeVal = JSON.stringify(endDateIni);
+
+
+
+
+    $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+
+      var sDate = picker.startDate.format('MM-DD-YYYY');
+      console.log(sDate);
+
+      var eDate = picker.endDate.format('MM-DD-YYYY');
+      console.log(eDate);
+      sessionStorage.startDateRangeVal = JSON.stringify(sDate);
+      sessionStorage.endDateRangeVal = JSON.stringify(eDate);
+    });
+
+});
+
+
+
+
+
+      var i = 0;
+      var countId = 1;
+
+      function duplicate() {
+
+        var originalDiv = document.getElementById("addable0");
+        var divAddable = document.getElementById("oriDiv");
+        var divEx = document.createElement('DIV');
+        divEx.innerHTML =
+
+
+          `<div class="row-whole" id="addable` + countId + `" style="display: flex; margin-left: auto; margin-right: auto;">
+        <div id="tranD` + countId +
+          `" style="margin-right: 50px" class="row-element col-md-3">
+        <h4 style="font-weight: bold">Transaction Details:</h4>
+        <select name="transactionDetails" id="selectable_` + countId +
+          `" onchange="myFilterFunction(id)" class="row-elem">
+      <option value="---Please Select---"selected disabled>---Please Select---</option>
+      <option value="Media Transactions">Media Transactions</option>
+      <option value="Text Transactions">Text Transactions</option>
+      <option value="Comment Transaction">Comment Transaction</option>
+        </select>
+        <p id="demo2` +
+          countId + `" style="display: inline"></p>
+      </div>
+      <br>
+      <br>
+        <div id="tranT` + countId +
+          `" style="margin-right: 50px;" class="row-element col-md-3">
+          <h4 style="font-weight: bold">Transaction Type:</h4>
+          <select name="transactionType" id="tType` + countId +
+          `" class="row-elem"></select>
+          <p id="demo3" style="display: inline"></p>
+        </div>
+      <br>
+        <div id="inputBox` + countId +
+          `" style="margin-right: 50px" class="row-element col-md-3">
+          <h4 style="font-weight:bold">Quantity:</h4>
+          <input type="text" name="quantity" id="quanValue` + countId +
+          `" class="row-elem input-sm" style="border-radius:8px">
+        </div>
+      <p id="demo5" style="display: inline"></p>
+        <div class="col-md-3" style="padding-top: 30px">
+          <button id="addButton` + countId +
+          `" type="submit" onclick="duplicate()"><i class="glyphicon glyphicon-plus"></i></button>
+        </div>
+      </div>`
+        console.log(divEx);
+        divAddable.appendChild(divEx);
+
+
+        countId += 1;
+      }
+
+
+      function myFilterFunction(id) {
+
+        var tranDetails = document.getElementById(id); //selectable_6
+        var index = id.indexOf('_'); // 10
+        var tranElem = document.getElementById("tType" + id.slice(index + 1,id.length));
+        console.log(id);
+
+        var tranType0 = ["Images", "GPS"]
+        var tranType1 = ["Checkbox", "Checklist", "Dropdown", "Number", "Radio", "Text"]
+        var tranType2 = ["Media Comment", "Text Comment"];
+        console.log(tranDetails);
+        console.log(tranDetails.value);
+        if (tranDetails.value == "Media Transactions") {
+          tranElem.innerHTML = '';
+          for (i = 0; i < tranType0.length; i++) {
+            console.log('in loop');
+            var createElem = document.createElement("OPTION");
+            var tt0 = document.createTextNode(tranType0[i]);
+
+            createElem.appendChild(tt0);
+            tranElem.appendChild(createElem);
+          }
+        } else if (tranDetails.value == "Text Transactions") {
+          tranElem.innerHTML = '';
+          for (i = 0; i < tranType1.length; i++) {
+            var createElem = document.createElement("OPTION");
+            var tt1 = document.createTextNode(tranType1[i]);
+
+            createElem.appendChild(tt1);
+            tranElem.appendChild(createElem);
+
+          }
+        } else if (tranDetails.value == "Comment Transaction") {
+          tranElem.innerHTML = '';
+          for (i = 0; i < tranType2.length; i++) {
+            var createElem = document.createElement("OPTION");
+            var tt2 = document.createTextNode(tranType2[i]);
+            createElem.appendChild(tt2);
+            tranElem.appendChild(createElem);
+          }
+
+        }
+      }
+      // window.onload = myPriceFunction();
+      //
+      // function myPriceFunction() {
+      // var myObj = '{"media":[{"image": 20 ,"GPS": 30, "comment": 40}], "text":[{"barcode": 23, "checklist": 12, "dropdown": 1, "number": 30, "radio": 6, "textcomment": 12, "mediacomment": 4}]}'
+      // var jVal = JSON.parse(myObj);
+      // var transacType = document.getElementById("addable0-selector0").value;
+      // var quanVal = Number(document.getElementById("quanValue0").value);
+      // console.log(jVal.text[0].barcode);
+      // console.log(transacType);
+      // console.log(quanVal * jVal.media[0].image);
+      //
+      //
+      // switch (transacType) {
+      //   case "Images":
+      //   price = jVal.media[0].image;
+      //     break;
+      //   case "GPS":
+      //   price = jVal.media[0].GPS;
+      //     break;
+      //   case "comment":
+      //   price = jVal.media[0].comment;
+      //     break;
+      //   case "barcode":
+      //   price = jVal.text[0].barcode;
+      //     break;
+      //   case "Checklist":
+      //   price = jVal.text[0].checklist;
+      //     break;
+      //   case "Dropdown":
+      //   price = jVal.text[0].dropdown;
+      //     break;
+      //   case "Number":
+      //   price = jVal.text[0].number;
+      //     break;
+      //   case "Radio":
+      //   price = jVal.text[0].radio;
+      //     break;
+      //   case "Text Comment":
+      //   price = jVal.text[0].textcomment;
+      //    break;
+      //    case "Media Comment":
+      //    price = jVal.text[0].mediacomment;
+      //
+      //
+      //
+      // }
+      // document.getElementById("demo7").innerHTML = price * quanVal;
+      //
+      // }
+
+
+
+
+    </script>
+
+</body>

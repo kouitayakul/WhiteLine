@@ -1,0 +1,61 @@
+
+
+
+.cal {
+
+text-align: center;
+color: black;
+text-shadow: 3px 2px white;
+font-weight: bold;
+height: 100%;
+margin: 0;
+background-color: #01FF70;
+
+
+}
+
+.inputTextBox {
+  position: relative;
+  top: 150px;
+  line-height: 50px;
+  height: 100%;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 25px;
+
+}
+
+.button {
+  padding: 8px;
+  margin: 30;
+  position: relative;
+  top: 200px;
+
+}
+
+.resultBox {
+  position: relative;
+  top: 275px;
+  line-height: 50px;
+}
+
+.leftpane {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: #01FF70;
+  border-collapse: collapse;
+
+}
+
+.rightpane {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: yellow;
+  border-collapse: collapse;
+
+
+}

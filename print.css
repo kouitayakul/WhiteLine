@@ -1,0 +1,245 @@
+@media print {
+  @page {margin: 0.5cm;
+  margin-bottom: 0;}
+
+#nav-menu {
+    display: none;
+  }
+
+#whiteLineImg {
+  margin-top: -5px;
+  margin-bottom: -5px;
+
+
+}
+
+.busiBio {
+  margin-top: -10px;
+  font-size: 10px;
+  width: 70%;
+  padding-left: 25px;
+
+
+
+
+}
+
+tr,td,th{
+  padding:0 !important;
+  font-size: 10px;
+
+}
+/*#whiteLineBio {
+  margin-left: -1%;
+
+  margin-top: -8px;
+
+}*/
+
+
+
+
+
+#quotation {
+  margin-top: -20px;
+  height: 10px;
+  font-size: 15px;
+}
+
+.noAndDate {
+  margin-top: 3%;
+  height: 30px;
+
+}
+
+#invoiceNo, #datePrepare {
+  font-size: 10px;
+
+}
+
+#dateToday, #invoiceNumber{
+  font-size: 10px;
+}
+
+.glyphicon-plus {
+  display: none;
+}
+
+
+
+.tableHeader {
+  text-align: center;
+
+}
+
+
+
+
+
+.tableResults {
+  border: 2px solid;
+  margin-left: 331px;
+
+}
+
+#totalAmountLicense {
+  width: 104px !important;
+}
+
+#ssFinalTotalAmount {
+  width: 104px !important;
+}
+
+
+
+
+
+#note {
+  width: 20%;
+  margin-left: -14px;
+  font-size: 10px;
+
+
+}
+
+#tableNote {
+  width: 30%;
+  font-size: 10px;
+
+
+}
+
+#signature {
+  margin-top: -110px;
+  font-size: 10px;
+
+
+
+
+}
+
+
+
+#name {
+  margin-top: -30px;
+  margin-left: -10px;
+  font-size: 10px;
+
+
+}
+
+#date {
+  margin-top: -7px;
+  margin-left: -6px;
+  font-size: 10px;
+}
+
+#prepDate {
+  margin-top: -25px;
+  margin-left: -6px;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+#approve {
+  margin-top: -110px;
+  font-size: 10px;
+}
+
+#finalNote {
+  padding-top: 50px !important;
+  vertical-align: bottom;
+  font-size: 10px;
+  position: fixed;
+  padding-bottom: 0;
+
+
+
+
+}
+
+input {
+  border: none;
+}
+
+
+
+
+
+
+
+
+#toWhom {
+  font-size: 10px;
+  margin-left: -20px;
+
+}
+
+#recipient  {
+  margin-left: -16px;
+  font-size: 10px;
+  vertical-align: text-top;
+  padding-bottom: 0;
+
+}
+
+#recipient::placeholder {
+  visibility: hidden;
+}
+
+select {
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-indent: 0.1;
+  text-overflow: '';
+}
+
+#tableReceipt {
+  margin-top: -30px;
+}
+
+#linePrep, #lineApprove {
+  font-size: 15px;
+}
+
+th.tableHeader {
+  background-color: rgb(175,175,175) !important;
+    -webkit-print-color-adjust: exact;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

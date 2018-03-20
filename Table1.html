@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title style="color:black">SUMMARY</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css" media="screen">
+  <link rel="stylesheet" href="print.css" media="print">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  .tetet{
+    background: black;
+  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: black;
+      font-weight: bold
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: lighter;
+      color: rbg(150, 150, 150)
+    }
+    /*h3 {
+      position: absolute;
+      top: 45px;
+      right: 45px;
+    }*/
+
+    img {
+      float: left;
+      margin: 40px;
+      padding: 15;
+      opacity: 1;
+    }
+
+    div.absolute {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+    }
+
+
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    textarea:hover {
+      border:  solid #AFEEEE;
+      color: white;
+    }
+
+    #recipient:hover {
+      color: black
+    }
+
+
+  </style>
+
+
+
+</head>
+<ul id="nav-menu">
+  <li><a href="UserInput.html">Home</a></li>
+  <li><a href="Table1.html">Quotation</a></li>
+
+</ul>
+<div class="row">
+  <div class="col-xs-6">
+    <img id="whiteLineImg" src="http://www.whiteline-group.com/wp-content/uploads/2014/07/tech.jpg" ) alt="Whiteline Tech" style="width:200px;height:100px;" class="w3-animate-opacity">
+
+    <div id="whiteLineBio" class="w3-animate-right">
+      <h4 class="busiBio">Whiteline Technology Co., Ltd</h4>
+      <p class="busiBio">208 Wireless Road Building, 5th Floor, Unit 507
+        <br class="busiBio"> 208 Wireless Road, Lumpini, Pathumwan
+        <br class="busiBio"> Bangkok, 10330
+        <br class="busiBio"> Tel: 02-651-4164-5
+        <br class="busiBio"> TAX ID: 0105558151152
+      </p>
+    </div>
+  </div>
+  <div style="text-align: right" class="absolute quo col-xs-6">
+
+    <h3 id="quotation">Quotation</h3>
+
+    <div class="noAndDate" style="display: inline-flex">
+      <h6 id="invoiceNo">No:</h6>
+      <h6 style="margin-left: 5px;"><textarea id="invoiceNumber" cols="15" rows="1" style="border: aliceblue; background-color: initial" placeholder="________________"></textarea></h6>
+    </div>
+    <br>
+    <div class="noAndDate" style="display: inline-flex">
+      <h6 id="datePrepare" style="margin-left: -15px">Date:</h6>
+      <h6 style="margin-left: 5px;"><textarea id="dateToday" cols="15" rows="1" style="border: aliceblue; background-color: initial;" placeholder="________"></textarea></h6>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-1" style="padding-left: 40px; padding-right: 0;">
+    <h5 id="toWhom" style="text-align: center">To:</h5>
+  </div>
+  <div class="col-xs-11" style="padding-left: 0;">
+    <textarea id="recipient" cols="100" rows="5" style="border: aliceblue; background-color: initial; vertical-align: text-top"
+    placeholder="BUSINESS NAME
+Street address
+Area
+Pin Code"></textarea>
+  </div>
+</div>
+
+
+<body style="background-color:powderblue;">
+  <div class="row">
+    <div class="col-xs-12" style="padding-left: 40px; padding-right: 40px;  padding-top: 40px">
+      <table class="table table-responsive" id="tableReceipt">
+        <tbody id="tableBody">
+          <tr>
+            <th class="tableHeader" style="border: 1px solid">#</th>
+            <th class="tableHeader tablePSL" colspan="6" style="border: 1px solid">Product & Service List</th>
+            <th  class="tableHeader" style="border: 1px solid">Total Amount</th>
+          </tr>
+          <tr>
+            <td id="col1" rowspan="12" style="border: 1px solid; text-align: center;">1</td>
+            <td class="tablePSL" style="font-weight: bold">Transaction Details</td>
+            <td class="tablePSL" style="font-weight: bold">Transaction Type</td>
+            <td class="tablePSL" style="font-weight: bold ">Unit</td>
+            <td class="tablePSL" style="font-weight: bold; text-align: center">Qty</td>
+            <td class="tablePSL" style="font-weight: bold; text-align: center">Unit Prices</td>
+            <td class="tablePSL" style="font-weight: bold; text-align: center">Amount</td>
+            <td id="totalAmountFirst" rowspan="12" style="border: 1px solid; vertical-align: bottom; text-align: center"></td>
+          </tr>
+
+          <tr class="TTElemMedia">
+            <td>Media Transactions</td>
+            <td id="c0" value="Images">Images</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea  id="qM0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uP0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountM0"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemMedia">
+            <td><i id="pI0" class="glyphicon glyphicon-plus" onclick="myAddRowFunction(this)" title="Add New Row"></i></td>
+            <td id="c1" value="GPS">GPS</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qM1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uP1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountM1"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+
+
+          <tr class="TTElemText">
+            <td>Text Transactions</td>
+            <td id="c2" value="Checkbox">Checkbox</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT0"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemText">
+            <td></td>
+            <td id="c3" value="Checklist">Checklist</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT1"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemText">
+            <td></td>
+            <td id="c4" value="Dropdown">Dropdown</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT2" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT2" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT2"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemText">
+            <td></td>
+            <td id="c5" value="Number">Number</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT3" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT3" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT3"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemText">
+            <td></td>
+            <td id="c6" value="Radio">Radio</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT4" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT4" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT4"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemText">
+            <td><i id="pI1" class="glyphicon glyphicon-plus" onclick="myAddRowFunction(this)" title="Add New Row"></i></td>
+            <td id="c7" value="Text">Text</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qT5" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uT5" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountT5"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+
+          <tr class="TTElemComment">
+            <td>Comment Transaction</td>
+            <td id="c8" value="Media Comment">Media Comment</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qC0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uC0" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountC0"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr class="TTElemComment">
+            <td><i id="pI2" class="glyphicon glyphicon-plus" onclick="myAddRowFunction(this)" title="Add New Row"></i></td>
+            <td id="c9" value="Text Comment">Text Comment</td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qC1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea id="uC1" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center" id="amountC1"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          <tr id="totalTran">
+            <td colspan="3" style="border: 1px solid;">Total Transaction</td>
+            <td id="totalQ" style="border: 1px solid; text-align: center"></td>
+            <td colspan="2" style="border: 1px solid;"></td>
+          </tr>
+          <tr>
+            <th rowspan="4" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; font-weight: initial">2</th>
+            <th style="font-weight: bold; text-align: left; border-bottom: 1px solid; ">License (<textarea cols="3" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue; vertical-align: middle">5000</textarea> <i class="glyphicon glyphicon-bitcoin"></i> per month)</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate/Day</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Day</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Qty</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate Duration</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-right: 1px solid;">Amount</th>
+            <th id="totalAmountLicense" rowspan="4" style="border: 1px solid; vertical-align: bottom; text-align: center; background-color: initial; font-weight: initial"></th>
+            <!-- <th style="text-align: center; font-weight: bold;">Total Amount</th> -->
+          </tr>
+          <tr class="licenseRow">
+            <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" style="background-color: initial; border: aliceblue; text-align: center;"placeholder="&#8383"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" onchange="myLicenseFunction()" id="qtyLicense0" type="text" name="Quantity" style="background-color: initial; border: aliceblue; text-align: center;" placeholder="----"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" onchange="myLicenseFunction()" id="rateLicense0" type="text" name="Rate Duration" style="background-color: initial; border: aliceblue; text-align: center;" placeholder="&#8383"></textarea>
+            </td>
+            <td id="amountLicense0" style="text-align: center; vertical-align: middle;">
+            </td>
+
+          </tr>
+          <tr class="licenseRow">
+            <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" style="background-color: initial; border: aliceblue; text-align: center;"placeholder="&#8383"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" onchange="myLicenseFunction()" id="qtyLicense1" type="text" name="Quantity" style="background-color: initial; border: aliceblue; text-align: center;" placeholder="----"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" onchange="myLicenseFunction()" id="rateLicense1" type="text" name="Rate Duration"  style="background-color: initial; border: aliceblue; text-align: center;" placeholder="&#8383"></textarea>
+            </td>
+            <td id="amountLicense1" style="text-align: center; vertical-align: middle">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="border: 1px solid">Total User Licenses</td>
+            <td id="totalLicenseQTY" style="border: 1px solid; text-align: center"></td>
+            <td  colspan="2" style="border: 1px solid"></td>
+
+          </tr>
+          <tr>
+            <th id="col3" rowspan="4" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; column-width: 14px; font-weight: initial">3</th>
+            <th style="font-weight: bold; text-align: left; padding-right: 110px; border-bottom: 1px solid;">Support & Service</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage/Day</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Day</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">License</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage License</th>
+            <th style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-right: 1px solid;">Amount</th>
+            <td id="ssFinalTotalAmount" rowspan="4" style="border: 1px solid; width: 15.5%; vertical-align: bottom; text-align: center"></td>
+            <!-- <th style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-right: solid">Total Amount</th> -->
+
+          </tr>
+          <tr>
+            <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" type="text" name="Wage/Day" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" type="text" name="Day" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" id="ssLicense0" onchange="mySSLicenseFunction()" type="text" name="License" style="background-color: initial; border: aliceblue; text-align: center;" placeholder="----"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" id="ssWageLicense0" onchange="mySSLicenseFunction()" type="text" name="Wage License" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" id="amountLicense3" onchange="mySSLicenseFunction()" type="text" name="amount" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+
+          </tr>
+          <tr>
+            <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" type="text" name="Wage/Day" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" type="text" name="Day"  style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea  cols="3" rows="1" id="ssLicense1" onchange="mySSLicenseFunction()" type="text" name="License" style="background-color: initial; border: aliceblue; text-align: center;" placeholder="----"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" id="ssWageLicense1" onchange="mySSLicenseFunction()" type="text" name="Wage License" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+            <td style="text-align: center;"><textarea cols="3" rows="1" id="amountLicense4" onchange="mySSLicenseFunction()" type="text" name="amount" class="input-sm" size="5" style="background-color: initial; border: aliceblue; text-align: center;"></textarea>
+            </td>
+
+          </tr>
+          <tr>
+            <td style="border: 1px solid" colspan="3">Support & Service Summary</td>
+            <td id="totalSSLicense0" style="border: 1px solid; text-align: center"></td>
+            <td id="totalSSLicense1" style="border: 1px solid; text-align: center"></td>
+            <td id="totalSSLicense2" style="border: 1px solid;  text-align: center"></td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div style="padding-left: 40px; padding-right: 40px;">
+      <table class="table allTables" style="margin-top: -22px">
+        <tr>
+          <th rowspan="3" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; column-width: 14px; font-weight: initial">2</th>
+          <th style="font-weight: bold; text-align: left; border-bottom: 1px solid; ">License (<textarea cols="3" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue; vertical-align: middle">5000</textarea> <i class="glyphicon glyphicon-bitcoin"></i> per month)</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate/Day</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Day</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Qty</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate Duration</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Amount</th>
+          <th style="text-align: center; font-weight: bold;">Total Amount</th>
+        </tr>
+        <tr class="licenseRow">
+          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
+          <td style="text-align: center;"><input type="text" name="Rate/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
+          </td>
+          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
+          </td>
+          <td style="text-align: right;"><input onchange="myLicenseFunction()" id="qtyLicense0" type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
+          </td>
+          <td style="text-align: center;"><input onchange="myLicenseFunction()" id="rateLicense0" type="text" name="Rate Duration" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
+          </td>
+          <td id="amountLicense0" style="text-align: center; vertical-align: middle;">
+          </td>
+          <td id="totalAmountLicense" rowspan="3" style="border: 1px solid; vertical-align: bottom; text-align: center"></td>
+        </tr>
+        <tr class="licenseRow">
+          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
+          <td style="text-align: center;"><input type="text" name="Rate/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
+          </td>
+          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
+          </td>
+          <td style="text-align: right;"><input onchange="myLicenseFunction()" id="qtyLicense1" type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
+          </td>
+          <td style="text-align: center;"><input onchange="myLicenseFunction()" id="rateLicense1" type="text" name="Rate Duration" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
+          </td>
+          <td id="amountLicense1" style="text-align: center; vertical-align: middle">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" style="border: 1px solid">Total User Licenses</td>
+          <td id="totalLicenseQTY" style="border: 1px solid; text-align: center"></td>
+          <td colspan="2" style="border: 1px solid"></td>
+
+        </tr>
+      </table>
+    </div>
+  </div> -->
+  <!-- <div class="row">
+    <div class="col-xs-12" style="padding-left: 40px; padding-right: 40px;">
+      <table class="table allTables" style="margin-top: -22px">
+        <tr>
+          <th rowspan="3" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; column-width: 14px; font-weight: initial">3</th>
+          <th style="font-weight: bold; text-align: left; padding-right: 110px; border-bottom: 1px solid;">Support & Service</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage/Day</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Day</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">License</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage License</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Amount</th>
+          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-right: solid">Total Amount</th>
+
+        </tr>
+        <tr>
+          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
+          <td style="text-align: center;"><input type="text" name="Wage/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="ssLicense0" onchange="mySSLicenseFunction()" type="text" name="License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="ssWageLicense0" onchange="mySSLicenseFunction()" type="text" name="Wage License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="amountLicense3" onchange="mySSLicenseFunction()" type="text" name="amount" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td id="ssFinalTotalAmount" rowspan="3" style="border: 1px solid; width: 15.5%; vertical-align: bottom; text-align: center"></td>
+        </tr>
+        <tr>
+          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
+          <td style="text-align: center;"><input type="text" name="Wage/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="ssLicense1" onchange="mySSLicenseFunction()" type="text" name="License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="ssWageLicense1" onchange="mySSLicenseFunction()" type="text" name="Wage License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+          <td style="text-align: center;"><input id="amountLicense4" onchange="mySSLicenseFunction()" type="text" name="amount" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
+          </td>
+
+        </tr>
+        <tr>
+          <td style="border: 1px solid" colspan="4">Support & Service Summary</td>
+          <td id="totalSSLicense0" style="border: 1px solid; text-align: center"></td>
+          <td id="totalSSLicense1" style="border: 1px solid; text-align: center"></td>
+          <td id="totalSSLicense2" style="border: 1px solid;  text-align: center"></td>
+
+
+        </tr>
+      </table>
+    </div>
+  </div> -->
+
+  <div class="row">
+
+    <div class="col-xs-7" id="note" style="padding-left: 40px; padding-right: 40px;">
+      <textarea cols="50" rows="1" style="border: aliceblue; background-color: initial">
+This quotation is generated by using the last data come in on</textarea>
+      <textarea id="endDateInNote" cols="10" rows="1" style="border: aliceblue; background-color: initial; font-weight: bold"></textarea>
+
+    </div>
+
+    <div class="col-xs-5 " style="padding-left: 40px; padding-right: 40px;">
+      <table class="table table-responsive tableResults" style="margin-top: -22px">
+        <tr>
+          <td id="subtotal" style="font-weight: bold">Sub-Total:</td>
+          <td style="border: 1px solid; width: 40%" id="disTotalAmount" class="finalResults"></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold">VAT at 7%:</td>
+          <td style="border: 1px solid" id="vat" class="finalResults"></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold">Total:</td>
+          <td style="border: 1px solid" id=finalTotal class="finalResults"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- <div class="col-md-5 container" id="tableNote">
+    <table class="table table-responsive">
+      <tr>
+        <td style="font-weight: bold; text-align: center;">Qty</td>
+        <td style="font-weight: bold; text-align: center;">Unit Price</td>
+        <td style="font-weight: bold; text-align: center;">Amount</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
+        </td>
+        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
+        </td>
+        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
+        </td>
+      </tr>
+
+    </table>
+  </div> -->
+  <div class="row">
+    <div  class="col-xs-6" style="text-align: center; padding-top: 150px;">
+      <h4 id="signature" style="text-align: center;">Prepared By</h4>
+      <br>
+      <div>
+      <h4  id="linePrep" style="text-align: center;">________________________________</h4>
+
+  </div>
+    </div>
+    <div class="col-xs-6" style="text-align: center; padding-top: 150px;">
+      <h4 id="approve" style="text-align: center;">Approved By</h4>
+      <br>
+
+      <h4 id="lineApprove" style="text-align: center;">________________________________</h4>
+    </div>
+  </div>
+  <div class="col-xs-6" style="display: grid;">
+  <textarea  id="name" cols="20" rows="1" style="border: aliceblue; background-color: initial; text-align: center; vertical-align: middle;">
+Kittaya Kanchanobhas
+  </textarea>
+<div id="date" style="text-align: center">
+<p id="date">Prepared Date:</p>
+<textarea cols="15" rows="1"style="border: aliceblue; background-color: initial; text-align: center; vertical-align: middle;" id="prepDate"></textarea>
+</div>
+</div>
+  <div class="row">
+    <div id="finalNote" class="col-xs-12 container" style="padding-top: 40px;">
+      <br>
+      <br>
+      <textarea cols="100" rows="5"  style="border: aliceblue; background-color: initial;">
+    Note: If you have any question, please feel free to let me know.
+
+    Thank you for your business!
+  </textarea>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="JavaScriptReceiptFunction.js"></script>
+  <script>
+    var finalSubTotalArr = [];
+    window.onload = myTableFunction;
+
+    function myTableFunction() {
+      var project1Val = JSON.parse(sessionStorage.arrayValue);
+
+
+      sessionStorage.arr = JSON.stringify(arr);
+
+      for (var j = 0; j < project1Val.length; j++) {
+        if (project1Val[j].tTVal == "Images") {
+          document.getElementById("qM0").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "GPS") {
+          document.getElementById("qM1").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Checkbox") {
+          document.getElementById("qT0").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Checklist") {
+          document.getElementById("qT1").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Dropdown") {
+          document.getElementById("qT2").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Number") {
+          document.getElementById("qT3").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Radio") {
+          document.getElementById("qT4").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Text") {
+          document.getElementById("qT5").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Media Comment") {
+          document.getElementById("qC0").innerHTML = project1Val[j].qVal;
+        } else if (project1Val[j].tTVal == "Text Comment") {
+          document.getElementById("qC1").innerHTML = project1Val[j].qVal;
+        }
+      }
+
+      var endDateStored = JSON.parse(sessionStorage.endDateRangeVal);
+
+
+      document.getElementById("endDateInNote").innerHTML = endDateStored;
+
+
+      db.transaction(function(tx) {
+        tx.executeSql('SELECT value as value FROM receiptVFINAL', [], function(tx, results) {
+          var uPrice = results.rows.length;
+          var arrayAmountM = [];
+          var arrayAmountT = [];
+          var arrayAmountC = [];
+          var arrayQTYM = [];
+          var arrayQTYT = [];
+          var arrayQTYC = [];
+          var sumQTYM = 0;
+          var sumQTYT = 0;
+          var sumQTYC = 0;
+          var sumM = 0;
+          var sumT = 0;
+          var sumC = 0;
+          var uPriceMedia = document.querySelectorAll(".TTElemMedia");
+          var uPriceText = document.querySelectorAll(".TTElemText");
+          var uPriceComment = document.querySelectorAll(".TTElemComment");
+
+          for (var k = 0; k < uPriceMedia.length; k++) {
+            document.getElementById("uP" + k).innerHTML = results.rows[k].value;
+            var amountMedia = Number(document.getElementById("qM" + k).innerHTML) *
+              Number(document.getElementById("uP" + k).innerHTML)
+
+            document.getElementById("amountM" + k).innerHTML = amountMedia.toFixed(2);
+
+
+            // var tdValueM = document.getElementById("qM" + k).innerHTML;
+            //
+            //
+            //
+            // if (tdValueM == "") {
+            //   document.getElementById("qM" + k).innerHTML = "----";
+            //
+            //
+            //
+            // }
+
+
+            var arrayAmountElemM = Number(document.getElementById("amountM" + k).innerText);
+            arrayAmountM.push(arrayAmountElemM);
+
+            sumM += Number(arrayAmountM[k]);
+
+
+            var qTYM = Number(document.getElementById("qM" + k).innerHTML);
+
+            if (!isNaN(qTYM)) {
+              arrayQTYM.push(qTYM);
+              sumQTYM += Number(arrayQTYM[k]);
+
+            }
+
+
+          }
+          for (var l = 0; l < uPriceText.length; l++) {
+            document.getElementById("uT" + l).innerHTML = results.rows[l + 2].value;
+            var amountMedia = Number(document.getElementById("qT" + l).innerHTML) *
+              Number(document.getElementById("uT" + l).innerHTML);
+
+
+            document.getElementById("amountT" + l).innerHTML = amountMedia.toFixed(2);
+
+
+            // var tdValueT = document.getElementById("qT" + l).innerHTML;
+            //
+            //
+            // if (tdValueT == "") {
+            //   document.getElementById("qT" + l).innerHTML = "----";
+            // }
+
+            var arrayAmountElemT = Number(document.getElementById("amountT" + l).innerText);
+            arrayAmountT.push(arrayAmountElemT);
+
+            sumT += Number(arrayAmountT[l]);
+
+
+            var qTYT = Number(document.getElementById("qT" + l).innerHTML);
+
+            if (!isNaN(qTYT)) {
+              arrayQTYT.push(qTYT);
+              sumQTYT += Number(arrayQTYT[l]);
+            }
+
+          }
+
+          for (var w = 0; w < uPriceComment.length; w++) {
+            document.getElementById("uC" + w).innerHTML = results.rows[w + 8].value;
+            var amountMedia = Number(document.getElementById("qC" + w).innerHTML) *
+              Number(document.getElementById("uC" + w).innerHTML);
+
+
+            document.getElementById("amountC" + w).innerHTML = amountMedia.toFixed(2);
+
+            // var tdValueC = document.getElementById("qC" + w).innerHTML;
+            //
+            //
+            // if (tdValueC == "") {
+            //   document.getElementById("qC" + w).innerHTML = "----";
+            // }
+
+            var arrayAmountElemC = Number(document.getElementById("amountC" + w).innerText);
+            arrayAmountC.push(arrayAmountElemC);
+
+            sumC += Number(arrayAmountC[w]);
+
+            var qTYC = Number(document.getElementById("qC" + w).innerHTML);
+
+            if (!isNaN(qTYC)) {
+              arrayQTYC.push(qTYC);
+              sumQTYC += Number(arrayQTYC[w]);
+            }
+
+          }
+
+          var subTotal = (sumM + sumT + sumC);
+
+          document.getElementById("totalAmountFirst").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + subTotal.toFixed(2);
+
+          document.getElementById("disTotalAmount").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + subTotal.toFixed(2);
+
+          finalSubTotalArr.push(subTotal);
+
+          var VAT7 = (subTotal * 0.03);
+
+          document.getElementById("vat").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + VAT7.toFixed(2);
+
+          var finalTotal = (subTotal + VAT7);
+
+          document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotal.toFixed(2);
+
+          var date = new Date();
+
+          document.getElementById("dateToday").innerHTML = date.toDateString();
+          document.getElementById("prepDate").innerHTML = date.toDateString();
+
+          var totalQTY = (sumQTYM + sumQTYT + sumQTYC);
+          document.getElementById("totalQ").innerHTML = totalQTY;
+
+
+
+
+
+
+
+
+
+        })
+      })
+
+
+
+
+    }
+    var addIdM = 2;
+    var addIdT = 6;
+    var addIdC = 2;
+
+    function myAddRowFunction(elem) {
+      var plusIconArr = document.querySelectorAll(".glyphicon-plus");
+      var tableOriginal = document.getElementById("tableReceipt");
+      var tableBodyOriginal = document.getElementById("tableBody");
+      var newTr = document.createElement("tr");
+      var TTElemMediaArr = document.querySelectorAll(".TTElemMedia");
+      var TTElemTextArr = document.querySelectorAll(".TTElemText");
+      var TTElemCommentArr = document.querySelectorAll(".TTElemComment");
+
+
+
+
+
+
+
+      if (elem.id == "pI0") {
+        var columeNum1 = document.getElementById("col1").rowSpan += 1;
+        var columeTotalAmountFirst = document.getElementById("totalAmountFirst").rowSpan += 1;
+        newTr.className = "TTElemMedia"
+        newTr.innerHTML =
+          `
+            <td></td>
+             <td class="tdImgAndGPS" style="padding-left: 0;">
+              <select class="imgAndGPS" name="Transaction Type" onchange="imgOrGPS()">
+                <option value="Please Select" selected disabled>---Please Select---</option>
+                <option value="Images">Images</option>
+                <option value="GPS">GPS</option>
+              </select>
+            </td>
+            <td>transaction</td>
+            <td style="text-align: center"><textarea id="qM` +
+          addIdM + `" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+            <td style="text-align: center"><textarea  class="extraUp" id="uP` +
+          addIdM +
+          `" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()"></textarea></td>
+            <td style="text-align: center; vertical-align: middle" id="amountM` + addIdM +
+          `"><i class="glyphicon glyphicon-bitcoin"></i></td>
+          </tr>
+          `;
+
+        tableBodyOriginal.insertBefore(newTr, TTElemTextArr[0]);
+
+        addIdM += 1;
+
+      } else if (elem.id == "pI1") {
+        var columeNum1 = document.getElementById("col1").rowSpan += 1;
+        var columeTotalAmountFirst = document.getElementById("totalAmountFirst").rowSpan += 1;
+        newTr.className = "TTElemText"
+        newTr.innerHTML =
+          `<td></td>
+           <td style="padding-left: 0;">
+            <select class="transactionTypeText" name="Transaction Type">
+              <option selected value="Please Select" disabled>---Please Select---</option>
+              <option value="Checkbox">Checkbox</option>
+              <option value="Checklist">Checklist</option>
+              <option value="Dropdown">Dropdown</option>
+              <option value="Number">Number</option>
+              <option value="Radio">Radio</option>
+              <option value="Text">Text</option>
+            </select>
+          </td>
+          <td>transaction</td>
+          <td style="text-align: center"><textarea id="qT` +
+          addIdT + `" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+          <td style="text-align: center"><textarea id="uT` + addIdT +
+          `" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()">0.30</textarea></td>
+          <td style="text-align: center; vertical-align: middle" id="amountT` + addIdT +
+          `"><i class="glyphicon glyphicon-bitcoin"></i></td>`
+
+        addIdT += 1;
+
+
+        tableBodyOriginal.insertBefore(newTr, TTElemCommentArr[0]);
+      } else if (elem.id == "pI2") {
+        var columeNum1 = document.getElementById("col1").rowSpan += 1;
+        var columeTotalAmountFirst = document.getElementById("totalAmountFirst").rowSpan += 1;
+        console.log(columeNum1);
+        console.log(columeTotalAmountFirst);
+        newTr.className = "TTElemComment"
+        newTr.innerHTML =
+          `<td></td>
+           <td style="padding-left: 0;">
+            <select class="transactionTypeComment" name="Transaction Type">
+            <option selected value="Please Select" disabled>---Please Select---</option>
+            <option value="Media Comment">Media Comment</option>
+            <option value="Text Comment">Text Comment</option>
+            </select>
+          </td>
+          <td>transaction</td>
+          <td style="text-align: center"><textarea id="qC` +
+          addIdC + `" cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()" placeholder="----"></textarea></td>
+          <td style="text-align: center"><textarea id="uC` + addIdC +
+          `"cols="4" rows="1" style="border: aliceblue; background-color: initial; text-align: center" onchange="update_priceTotal()">0.30</textarea></td>
+          <td style="text-align: center; vertical-align: middle" id="amountC` + addIdC +
+          `"><i class="glyphicon glyphicon-bitcoin"></i></td>`
+
+        addIdC += 1;
+
+        tableBodyOriginal.insertBefore(newTr, document.getElementById("totalTran"));
+      }
+
+
+    }
+
+
+    function imgOrGPS() {
+      var imageAndGPSSelector = document.getElementsByClassName("imgAndGPS");
+      var extraImgGPSUp = document.getElementsByClassName("extraUp");
+
+
+      for (var ig = 0; ig < imageAndGPSSelector.length; ig++) {
+        if (imageAndGPSSelector[ig].value == "Images") {
+          extraImgGPSUp[ig].innerHTML = 1.50.toFixed(2);
+        } else if (imageAndGPSSelector[ig].value == "GPS") {
+          extraImgGPSUp[ig].innerHTML = 0.90.toFixed(2);
+        }
+
+      }
+    }
+
+    function update_priceTotal() {
+      var uPriceMedia = document.querySelectorAll(".TTElemMedia");
+      var uPriceText = document.querySelectorAll(".TTElemText");
+      var uPriceComment = document.querySelectorAll(".TTElemComment");
+      var updateArrM = [];
+      var updateArrT = [];
+      var updateArrC = [];
+      var updateArrQTYM = [];
+      var updateArrQTYT = [];
+      var updateArrQTYC = [];
+      var updateArrQTYFinal = [];
+      var updateSumM = 0;
+      var updateSumT = 0;
+      var updateSumC = 0;
+
+      document.getElementById("disTotalAmount").innerHTML = "";
+      document.getElementById("totalQ").innerHTML = "";
+
+      for (var m = 0; m < uPriceMedia.length; m++) {
+        var qMNumber = Number(document.getElementById("qM" + m).value);
+        var uPMNumber = Number(document.getElementById("uP" + m).value);
+
+
+
+        var updateAmountM = document.getElementById("amountM" + m).innerHTML = (qMNumber * uPMNumber).toFixed(2);
+        var updateQTYM = Number(document.getElementById("qM" + m).value);
+
+        if (isNaN(updateAmountM)) {
+          var emptyAmountM = Number(document.getElementById("amountM" + m).innerHTML = 0.00);
+
+
+        } else {
+          updateArrM.push(updateAmountM);
+        }
+
+        if (!isNaN(updateQTYM)) {
+
+          var updateSumQTYM = 0;
+          updateArrQTYM.push(updateQTYM);
+          for (var uqm = 0; uqm < updateArrQTYM.length; uqm++) {
+            updateSumQTYM += Number(updateArrQTYM[uqm]);
+          }
+        }
+
+      }
+      updateArrQTYFinal.push(updateSumQTYM);
+
+
+
+      for (var um = 0; um < updateArrM.length; um++) {
+        updateSumM += Number(updateArrM[um]);
+      }
+
+      for (var t = 0; t < uPriceText.length; t++) {
+        var qTNumber = Number(document.getElementById("qT" + t).value);
+        var uPTNumber = Number(document.getElementById("uT" + t).value);
+
+        var updateAmountT = document.getElementById("amountT" + t).innerHTML = (qTNumber * uPTNumber).toFixed(2);
+
+        if (isNaN(updateAmountT)) {
+          var emptyAmountT = Number(document.getElementById("amountT" + t).innerHTML = 0.00);
+
+        } else {
+          updateArrT.push(updateAmountT);
+        }
+
+        var updateQTYT = Number(document.getElementById("qT" + t).value);
+
+        if (!isNaN(updateQTYT)) {
+          var updateSumQTYT = 0;
+          updateArrQTYT.push(updateQTYT);
+          for (var uqt = 0; uqt < updateArrQTYT.length; uqt++) {
+            updateSumQTYT += Number(updateArrQTYT[uqt]);
+          }
+        }
+
+
+      }
+      updateArrQTYFinal.push(updateSumQTYT);
+
+
+      for (var ut = 0; ut < updateArrT.length; ut++) {
+        updateSumT += Number(updateArrT[ut]);
+      }
+
+
+      for (var c = 0; c < uPriceComment.length; c++) {
+        var qCNumber = Number(document.getElementById("qC" + c).value);
+        var uPCNumber = Number(document.getElementById("uC" + c).value);
+
+        var updateAmountC = document.getElementById("amountC" + c).innerHTML = (qCNumber * uPCNumber).toFixed(2);
+
+        if (isNaN(updateAmountC)) {
+          var emptyAmountC = Number(document.getElementById("amountC" + c).innerHTML = 0.00);
+
+        } else {
+          updateArrC.push(updateAmountC);
+        }
+
+        var updateQTYC = Number(document.getElementById("qC" + c).value);
+
+
+        if (!isNaN(updateQTYC)) {
+          var updateSumQTYC = 0;
+          updateArrQTYC.push(updateQTYC);
+          for (var uqc = 0; uqc < updateArrQTYC.length; uqc++) {
+            updateSumQTYC += Number(updateArrQTYC[uqc]);
+          }
+        }
+
+      }
+      updateArrQTYFinal.push(updateSumQTYC);
+      var sumQTYFinal = 0;
+      for (var tot = 0; tot < updateArrQTYFinal.length; tot++) {
+        if (!isNaN(updateArrQTYFinal[tot])) {
+          sumQTYFinal += Number(updateArrQTYFinal[tot]);
+        }
+      }
+
+      console.log(sumQTYFinal);
+
+
+      for (var uc = 0; uc < updateArrC.length; uc++) {
+        updateSumC += Number(updateArrC[uc]);
+      }
+
+
+
+
+
+
+
+      var subTotalUpdate = (updateSumM + updateSumT + updateSumC);
+
+      var firstTotalWithIcon = document.getElementById("totalAmountFirst").innerHTML;
+      var firstTotalNumber = Number(firstTotalWithIcon.replace(/^\D+/g, ''));
+
+      var secondTotalWithIcon = document.getElementById("totalAmountLicense").innerHTML;
+      var secondTotalNumber = Number(secondTotalWithIcon.replace(/^\D+/g, ''));
+
+      var thirdTotalWithIcon = document.getElementById('ssFinalTotalAmount').innerHTML;
+      var thirdTotalNumber = Number(thirdTotalWithIcon.replace(/^\D+/g, ''));
+
+
+
+      document.getElementById("totalAmountFirst").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + subTotalUpdate.toFixed(2);
+
+      document.getElementById("disTotalAmount").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + (subTotalUpdate + secondTotalNumber + thirdTotalNumber).toFixed(2);
+
+      document.getElementById("totalQ").innerHTML = sumQTYFinal;
+
+
+
+
+
+
+      var VAT7Update = ((subTotalUpdate + secondTotalNumber + thirdTotalNumber) * 0.03);
+
+      document.getElementById("vat").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + VAT7Update.toFixed(2);
+
+      var finalTotalUpdate = ((subTotalUpdate + secondTotalNumber + thirdTotalNumber) + VAT7Update);
+
+      document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdate.toFixed(2);
+    }
+
+
+
+
+    function myLicenseFunction() {
+
+      var licenseQuantity0 = Number(document.getElementById("qtyLicense0").value);
+      var licenseQuantity1 = Number(document.getElementById("qtyLicense1").value);
+      var licenseRate0 = Number(document.getElementById("rateLicense0").value);
+      var licenseRate1 = Number(document.getElementById("rateLicense1").value);
+
+      var totalLicense0 = document.getElementById("amountLicense0").innerHTML = (licenseQuantity0 * licenseRate0);
+      var totalLicense1 = document.getElementById("amountLicense1").innerHTML = (licenseQuantity1 * licenseRate1);
+
+      document.getElementById("totalLicenseQTY").innerHTML = (licenseQuantity0 + licenseQuantity1);
+      var secondTotalWithIcon = document.getElementById("totalAmountLicense").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + (totalLicense0 + totalLicense1).toFixed(2);
+      var secondTotalNumber = Number(secondTotalWithIcon.replace(/^\D+/g, ''));
+
+      var firstTotalWithIcon = document.getElementById("totalAmountFirst").innerHTML;
+      var firstTotalNumber = Number(firstTotalWithIcon.replace(/^\D+/g, ''));
+
+      var thirdTotalWithIcon = document.getElementById('ssFinalTotalAmount').innerHTML;
+      var thirdTotalNumber = Number(thirdTotalWithIcon.replace(/^\D+/g, ''));
+
+
+      document.getElementById("disTotalAmount").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + (firstTotalNumber + secondTotalNumber + thirdTotalNumber).toFixed(2);
+
+      var VAT7UpdateLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) * 0.03);
+
+      document.getElementById("vat").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + VAT7UpdateLicense.toFixed(2);
+
+      var finalTotalUpdateLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) + VAT7UpdateLicense);
+
+      document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdateLicense.toFixed(2);
+
+
+
+
+
+
+    }
+
+
+    function mySSLicenseFunction() {
+      var ssLicenseQTY0 = Number(document.getElementById("ssLicense0").value);
+      var ssLicenseQTY1 = Number(document.getElementById("ssLicense1").value);
+      var ssWageLicenseQTY0 = Number(document.getElementById("ssWageLicense0").value);
+      var ssWageLicenseQTY1 = Number(document.getElementById("ssWageLicense1").value);
+      var ssAmount0 = Number(document.getElementById("amountLicense3").value);
+      var ssAmount1 = Number(document.getElementById("amountLicense4").value);
+
+
+      document.getElementById("totalSSLicense0").innerHTML = (ssLicenseQTY0 + ssLicenseQTY1).toFixed(0);
+      document.getElementById("totalSSLicense1").innerHTML = (ssWageLicenseQTY0 + ssWageLicenseQTY1).toFixed(2);
+      document.getElementById("ssFinalTotalAmount").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + (ssAmount0 + ssAmount1).toFixed(2);
+
+      var firstTotalWithIcon = document.getElementById("totalAmountFirst").innerHTML;
+      var firstTotalNumber = Number(firstTotalWithIcon.replace(/^\D+/g, ''));
+
+      var secondTotalWithIcon = document.getElementById("totalAmountLicense").innerHTML;
+      var secondTotalNumber = Number(secondTotalWithIcon.replace(/^\D+/g, ''));
+
+      var thirdTotalWithIcon = document.getElementById('ssFinalTotalAmount').innerHTML;
+      var thirdTotalNumber = Number(thirdTotalWithIcon.replace(/^\D+/g, ''));
+
+      document.getElementById("disTotalAmount").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + (firstTotalNumber + secondTotalNumber + thirdTotalNumber).toFixed(2);
+
+      var VAT7UpdateSSLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) * 0.03);
+
+      document.getElementById("vat").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + VAT7UpdateSSLicense.toFixed(2);
+
+      var finalTotalUpdateSSLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) + VAT7UpdateSSLicense);
+
+      document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdateSSLicense.toFixed(2);
+
+
+
+
+
+
+    }
+  </script>
+
+</body>
