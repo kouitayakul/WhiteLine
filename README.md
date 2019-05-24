@@ -26,7 +26,7 @@ Built with:
 
 ## Credits:
 
-Thanks to Whiteline Tech, I was able to successfully finished my first internship. I was first introduced with HTML, CSS, Bootstrap, and Javascript through this project. Additionally, it was also my first time collaborating alongside a group of professional developers which allowed me to gain the experience of software development processes. Our team utilized Agile development process in which I was required to explain my updates in front of other developers. 
+Thanks to Whiteline Tech, I was able to successfully finished my first internship. I was first introduced with HTML, CSS, Bootstrap, and Javascript through this project. Additionally, it was also my first time collaborating alongside a group of professional developers which allowed me to gain the experience of software development processes. Our team utilized Agile development process in which I was required to explain my updates in front of other developers during our weekly meetings and at the end of each sprint. 
 
 The internship was a great experience that is now paving the way for me to continue developing my programming skills.  
 
