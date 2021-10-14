@@ -1,17 +1,11 @@
-
-
-
 .cal {
-
-text-align: center;
-color: black;
-text-shadow: 3px 2px white;
-font-weight: bold;
-height: 100%;
-margin: 0;
-background-color: #01FF70;
-
-
+  text-align: center;
+  color: black;
+  text-shadow: 3px 2px white;
+  font-weight: bold;
+  height: 100%;
+  margin: 0;
+  background-color: #01ff70;
 }
 
 .inputTextBox {
@@ -23,7 +17,6 @@ background-color: #01FF70;
   padding-bottom: 30px;
   box-shadow: 10px 10px 5px #888888;
   border-radius: 25px;
-
 }
 
 .button {
@@ -31,7 +24,6 @@ background-color: #01FF70;
   margin: 30;
   position: relative;
   top: 200px;
-
 }
 
 .resultBox {
@@ -44,9 +36,8 @@ background-color: #01FF70;
   width: 50%;
   height: 100%;
   float: left;
-  background-color: #01FF70;
+  background-color: #01ff70;
   border-collapse: collapse;
-
 }
 
 .rightpane {
@@ -56,6 +47,4 @@ background-color: #01FF70;
   float: right;
   background-color: yellow;
   border-collapse: collapse;
-
-
 }

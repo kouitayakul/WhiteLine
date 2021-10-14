@@ -1,117 +1,150 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title style="color: black">Total Amount</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="StyleV3.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body style="background-color: LightSeaGreen">
+    <div class="nav-bar">
+      <ul class="nav-bar">
+        <li><a href="Porject1.html">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
 
-<head>
-  <title style="color:black">Total Amount</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="StyleV3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body style="background-color:LightSeaGreen">
+    <div
+      class="container; col-md-8"
+      align="center"
+      style="
+        background-color: #555;
+        margin-top: 50px;
+        padding-top: 20px;
+        margin-left: 20px;
+      "
+    >
+      <ul class="list-group" style="text-align: left" id="lit">
+        <li class="list-group-item">
+          <h5 style="font-weight: bold">Transaction Type:</h5>
+          <h5
+            style="
+              font-weight: bold;
+              float: right;
+              margin-right: 100px;
+              margin-top: -30px;
+            "
+          >
+            Unit Price:
+          </h5>
+          <br />
+        </li>
+        <li class="list-group-item">
+          Images<input
+            id="li0"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          GPS<input
+            id="li1"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Checkbox<input
+            id="li2"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Checklist<input
+            id="li3"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Dropdown<input
+            id="li4"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Number<input
+            id="li5"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Radio<input
+            id="li6"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Text<input
+            id="li7"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Media Comment<input
+            id="li8"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+        <li class="list-group-item">
+          Text Comment<input
+            id="li9"
+            type="text"
+            style="display: inline; float: right; border-radius: 20px"
+          />
+        </li>
+      </ul>
+    </div>
+    <button
+      onclick="myFucntionAdd()"
+      type="submt"
+      style="
+        margin-left: 50px;
+        margin-top: 10%;
+        font-size: xx-large;
+        font-weight: bold;
+      "
+      class="jumbotron btn btn-primary"
+    >
+      ADD TOTAL
+    </button>
 
-<div class="nav-bar">
-  <ul class="nav-bar">
-    <li><a href="Porject1.html">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</div>
+    <div class="container; col-md-4">
+      <br />
+      <h4 style="font-weight: bold">Total Amount:</h4>
+      <input
+        id="totalValue"
+        type="text"
+        style="
+          height: 100px;
+          width: 817px;
+          margin-top: 35px;
+          margin-left: 5px;
+          border-radius: 20px;
+          border-color: #555;
+        "
+      />
+    </div>
 
-
-  <div class="container; col-md-8" align="center" style="background-color: #555;margin-top: 50px;padding-top: 20px;margin-left: 20px;">
-    <ul class="list-group" style="text-align: left" id="lit">
-      <li class="list-group-item"><h5 style="font-weight: bold">Transaction Type:</h5><h5 style="font-weight: bold; float: right; margin-right: 100px; margin-top: -30px;">Unit Price:</h5><br></li>
-      <li class="list-group-item">Images<input id="li0" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">GPS<input id="li1" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Checkbox<input id="li2" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Checklist<input id="li3" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Dropdown<input id="li4" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Number<input id="li5" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Radio<input id="li6" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Text<input id="li7" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Media Comment<input id="li8" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-      <li class="list-group-item">Text Comment<input id="li9" type="text" style="display: inline; float: right; border-radius: 20px"></li>
-    </ul>
-
-  </div>
-  <button onclick="myFucntionAdd()" type="submt" style="margin-left: 50px; margin-top: 10%; font-size: xx-large; font-weight: bold" class="jumbotron btn btn-primary">ADD TOTAL</button>
-
-  <div class="container; col-md-4">
-    <br>
-  <h4 style="font-weight: bold">Total Amount:</h4>
-  <input id="totalValue"type="text" style="height: 100px; width: 817px; margin-top: 35px; margin-left: 5px; border-radius: 20px; border-color: #555">
-</div>
-
-
-<script src="Project1JavaScript.js">
-
-
-
-
-</script>
-
-
-<script>
-// function myFucntionAdd() {
-//   var li0 = document.getElementById('li1').value;
-//   var tranType0 = ["Images", "GPS","Checkbox", "Checklist", "Dropdown", "Number", "Radio", "Text", "Media Comment", "Text Comment"]
-//   var db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
-//
-//   for (i=1; i<=tranType0.length; i++) {
-//     var y = document.getElementById("li" + i).value
-//
-//     db.transaction(function (tx) {
-//     tx.executeSql('DELETE FROM receiptV2');
-//     tx.executeSql('CREATE TABLE IF NOT EXISTS receiptV2 (type, value integer)');
-//     tx.executeSql('INSERT INTO receiptV2 (type, value) VALUES (trantype0[i], i)');
-
-
-
-  // var li0 = document.getElementById('li1').value;
-  // console.log(li0);
-  // var tranType0 = ["Images", "GPS","Checkbox", "Checklist", "Dropdown", "Number", "Radio", "Text", "Media Comment", "Text Comment"]
-  // console.log(tranType0.length);
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+    <script src="Project1JavaScript.js"></script>
+  </body>
+</html>

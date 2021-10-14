@@ -29,50 +29,11 @@
         <h4 style="font-weight: bold">Business Type:</h4>
         <select id="input1" name="business">
   <option selected value="Whiteline Technology Co.,Ltd">Whiteline Technology Co., Ltd</option>
-  <!-- <option value="Hollister Co.,Ltd">Hollister Co., Ltd</option>
-  <option value="Nike Co.,Ltd">Nike Co., Ltd</option>
-  <option value="UnderArmour Co.,Ltd">Under Armour Co., Ltd</option> -->
 </select>
         <p id="demo1" style="display: inline"></p>
       </div>
     </div>
 
-
-    <!-- <div class="container; col-sm-2" align="right">
-      <h4 style="font-weight: bold; margin-right: 95px;">Start:</h4>
-      <div class="container">
-    <div class="row">
-        <div class='col-sm-2'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='date' class="form-control" id="date"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div>
-
-    <div class="container; col-sm-2" align="right">
-      <h4 style="font-weight: bold; margin-right: 100px;">End:</h4>
-      <div class="container">
-    <div class="row">
-        <div class='col-sm-2'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker2'>
-                    <input type='date' class="form-control" id="enddate"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div> -->
     <div class="col-sm-4" style="text-align: left">
       <h4 style="font-weight: bold">Start - End:</h4>
     <input id="startEndDate" type="text" name="daterange" style="border-radius: 5px" size="22"/>
@@ -142,19 +103,7 @@
 
     <script type="text/javascript" src="daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" /> -->
     <script type="text/javascript">
-
-      // document.getElementById("date").valueAsDate = new Date();
-      // var d = new Date();
-      // console.log(d)
-      // var b= d.setDate(d.getDate() - 1);
-      // document.getElementById("enddate").valueAsDate = new Date(b);
-      //   console.log(new Date(b))
 
       $(function() {
     $('input[name="daterange"]').daterangepicker();
@@ -164,9 +113,6 @@
 
       sessionStorage.startDateRangeVal = JSON.stringify(startDateIni);
       sessionStorage.endDateRangeVal = JSON.stringify(endDateIni);
-
-
-
 
     $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
 
@@ -180,10 +126,6 @@
     });
 
 });
-
-
-
-
 
       var i = 0;
       var countId = 1;
@@ -283,59 +225,7 @@
 
         }
       }
-      // window.onload = myPriceFunction();
-      //
-      // function myPriceFunction() {
-      // var myObj = '{"media":[{"image": 20 ,"GPS": 30, "comment": 40}], "text":[{"barcode": 23, "checklist": 12, "dropdown": 1, "number": 30, "radio": 6, "textcomment": 12, "mediacomment": 4}]}'
-      // var jVal = JSON.parse(myObj);
-      // var transacType = document.getElementById("addable0-selector0").value;
-      // var quanVal = Number(document.getElementById("quanValue0").value);
-      // console.log(jVal.text[0].barcode);
-      // console.log(transacType);
-      // console.log(quanVal * jVal.media[0].image);
-      //
-      //
-      // switch (transacType) {
-      //   case "Images":
-      //   price = jVal.media[0].image;
-      //     break;
-      //   case "GPS":
-      //   price = jVal.media[0].GPS;
-      //     break;
-      //   case "comment":
-      //   price = jVal.media[0].comment;
-      //     break;
-      //   case "barcode":
-      //   price = jVal.text[0].barcode;
-      //     break;
-      //   case "Checklist":
-      //   price = jVal.text[0].checklist;
-      //     break;
-      //   case "Dropdown":
-      //   price = jVal.text[0].dropdown;
-      //     break;
-      //   case "Number":
-      //   price = jVal.text[0].number;
-      //     break;
-      //   case "Radio":
-      //   price = jVal.text[0].radio;
-      //     break;
-      //   case "Text Comment":
-      //   price = jVal.text[0].textcomment;
-      //    break;
-      //    case "Media Comment":
-      //    price = jVal.text[0].mediacomment;
-      //
-      //
-      //
-      // }
-      // document.getElementById("demo7").innerHTML = price * quanVal;
-      //
-      // }
-
-
-
-
+      
     </script>
 
 </body>

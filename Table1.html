@@ -28,11 +28,6 @@
       font-weight: lighter;
       color: rbg(150, 150, 150)
     }
-    /*h3 {
-      position: absolute;
-      top: 45px;
-      right: 45px;
-    }*/
 
     img {
       float: left;
@@ -327,110 +322,6 @@ Pin Code"></textarea>
       </table>
     </div>
   </div>
-
-  <!-- <div class="row">
-    <div style="padding-left: 40px; padding-right: 40px;">
-      <table class="table allTables" style="margin-top: -22px">
-        <tr>
-          <th rowspan="3" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; column-width: 14px; font-weight: initial">2</th>
-          <th style="font-weight: bold; text-align: left; border-bottom: 1px solid; ">License (<textarea cols="3" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue; vertical-align: middle">5000</textarea> <i class="glyphicon glyphicon-bitcoin"></i> per month)</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate/Day</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Day</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Qty</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Rate Duration</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid">Amount</th>
-          <th style="text-align: center; font-weight: bold;">Total Amount</th>
-        </tr>
-        <tr class="licenseRow">
-          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
-          <td style="text-align: center;"><input type="text" name="Rate/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
-          </td>
-          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
-          </td>
-          <td style="text-align: right;"><input onchange="myLicenseFunction()" id="qtyLicense0" type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
-          </td>
-          <td style="text-align: center;"><input onchange="myLicenseFunction()" id="rateLicense0" type="text" name="Rate Duration" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
-          </td>
-          <td id="amountLicense0" style="text-align: center; vertical-align: middle;">
-          </td>
-          <td id="totalAmountLicense" rowspan="3" style="border: 1px solid; vertical-align: bottom; text-align: center"></td>
-        </tr>
-        <tr class="licenseRow">
-          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
-          <td style="text-align: center;"><input type="text" name="Rate/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
-          </td>
-          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
-          </td>
-          <td style="text-align: right;"><input onchange="myLicenseFunction()" id="qtyLicense1" type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center"></input>
-          </td>
-          <td style="text-align: center;"><input onchange="myLicenseFunction()" id="rateLicense1" type="text" name="Rate Duration" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial; text-align: center" placeholder="&#8383"></input>
-          </td>
-          <td id="amountLicense1" style="text-align: center; vertical-align: middle">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="4" style="border: 1px solid">Total User Licenses</td>
-          <td id="totalLicenseQTY" style="border: 1px solid; text-align: center"></td>
-          <td colspan="2" style="border: 1px solid"></td>
-
-        </tr>
-      </table>
-    </div>
-  </div> -->
-  <!-- <div class="row">
-    <div class="col-xs-12" style="padding-left: 40px; padding-right: 40px;">
-      <table class="table allTables" style="margin-top: -22px">
-        <tr>
-          <th rowspan="3" style="border: 1px solid black; text-align: center; vertical-align: top; background-color: initial; column-width: 14px; font-weight: initial">3</th>
-          <th style="font-weight: bold; text-align: left; padding-right: 110px; border-bottom: 1px solid;">Support & Service</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage/Day</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Day</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">License</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Wage License</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Amount</th>
-          <th style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-right: solid">Total Amount</th>
-
-        </tr>
-        <tr>
-          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-25, 2016</textarea></td>
-          <td style="text-align: center;"><input type="text" name="Wage/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="ssLicense0" onchange="mySSLicenseFunction()" type="text" name="License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="ssWageLicense0" onchange="mySSLicenseFunction()" type="text" name="Wage License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="amountLicense3" onchange="mySSLicenseFunction()" type="text" name="amount" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td id="ssFinalTotalAmount" rowspan="3" style="border: 1px solid; width: 15.5%; vertical-align: bottom; text-align: center"></td>
-        </tr>
-        <tr>
-          <td><textarea cols="15" rows="1" style="border-radius: 5px; background-color: initial; border: aliceblue">May 1-31, 2016</textarea></td>
-          <td style="text-align: center;"><input type="text" name="Wage/Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input type="text" name="Day" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="ssLicense1" onchange="mySSLicenseFunction()" type="text" name="License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="ssWageLicense1" onchange="mySSLicenseFunction()" type="text" name="Wage License" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-          <td style="text-align: center;"><input id="amountLicense4" onchange="mySSLicenseFunction()" type="text" name="amount" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial"></input>
-          </td>
-
-        </tr>
-        <tr>
-          <td style="border: 1px solid" colspan="4">Support & Service Summary</td>
-          <td id="totalSSLicense0" style="border: 1px solid; text-align: center"></td>
-          <td id="totalSSLicense1" style="border: 1px solid; text-align: center"></td>
-          <td id="totalSSLicense2" style="border: 1px solid;  text-align: center"></td>
-
-
-        </tr>
-      </table>
-    </div>
-  </div> -->
-
   <div class="row">
 
     <div class="col-xs-7" id="note" style="padding-left: 40px; padding-right: 40px;">
@@ -457,24 +348,6 @@ This quotation is generated by using the last data come in on</textarea>
       </table>
     </div>
   </div>
-  <!-- <div class="col-md-5 container" id="tableNote">
-    <table class="table table-responsive">
-      <tr>
-        <td style="font-weight: bold; text-align: center;">Qty</td>
-        <td style="font-weight: bold; text-align: center;">Unit Price</td>
-        <td style="font-weight: bold; text-align: center;">Amount</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
-        </td>
-        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
-        </td>
-        <td style="text-align: center;"><input type="text" name="Quantity" class="input-sm" size="5" style="margin-left: -15px; border-radius: 5px; background-color: initial;"></input>
-        </td>
-      </tr>
-
-    </table>
-  </div> -->
   <div class="row">
     <div  class="col-xs-6" style="text-align: center; padding-top: 150px;">
       <h4 id="signature" style="text-align: center;">Prepared By</h4>
@@ -511,13 +384,6 @@ Kittaya Kanchanobhas
   </textarea>
     </div>
   </div>
-
-
-
-
-
-
-
 
   <script type="text/javascript" src="JavaScriptReceiptFunction.js"></script>
   <script>
@@ -586,19 +452,6 @@ Kittaya Kanchanobhas
 
             document.getElementById("amountM" + k).innerHTML = amountMedia.toFixed(2);
 
-
-            // var tdValueM = document.getElementById("qM" + k).innerHTML;
-            //
-            //
-            //
-            // if (tdValueM == "") {
-            //   document.getElementById("qM" + k).innerHTML = "----";
-            //
-            //
-            //
-            // }
-
-
             var arrayAmountElemM = Number(document.getElementById("amountM" + k).innerText);
             arrayAmountM.push(arrayAmountElemM);
 
@@ -623,14 +476,6 @@ Kittaya Kanchanobhas
 
             document.getElementById("amountT" + l).innerHTML = amountMedia.toFixed(2);
 
-
-            // var tdValueT = document.getElementById("qT" + l).innerHTML;
-            //
-            //
-            // if (tdValueT == "") {
-            //   document.getElementById("qT" + l).innerHTML = "----";
-            // }
-
             var arrayAmountElemT = Number(document.getElementById("amountT" + l).innerText);
             arrayAmountT.push(arrayAmountElemT);
 
@@ -653,13 +498,6 @@ Kittaya Kanchanobhas
 
 
             document.getElementById("amountC" + w).innerHTML = amountMedia.toFixed(2);
-
-            // var tdValueC = document.getElementById("qC" + w).innerHTML;
-            //
-            //
-            // if (tdValueC == "") {
-            //   document.getElementById("qC" + w).innerHTML = "----";
-            // }
 
             var arrayAmountElemC = Number(document.getElementById("amountC" + w).innerText);
             arrayAmountC.push(arrayAmountElemC);
@@ -699,14 +537,6 @@ Kittaya Kanchanobhas
           var totalQTY = (sumQTYM + sumQTYT + sumQTYC);
           document.getElementById("totalQ").innerHTML = totalQTY;
 
-
-
-
-
-
-
-
-
         })
       })
 
@@ -726,12 +556,6 @@ Kittaya Kanchanobhas
       var TTElemMediaArr = document.querySelectorAll(".TTElemMedia");
       var TTElemTextArr = document.querySelectorAll(".TTElemText");
       var TTElemCommentArr = document.querySelectorAll(".TTElemComment");
-
-
-
-
-
-
 
       if (elem.id == "pI0") {
         var columeNum1 = document.getElementById("col1").rowSpan += 1;
@@ -964,12 +788,6 @@ Kittaya Kanchanobhas
         updateSumC += Number(updateArrC[uc]);
       }
 
-
-
-
-
-
-
       var subTotalUpdate = (updateSumM + updateSumT + updateSumC);
 
       var firstTotalWithIcon = document.getElementById("totalAmountFirst").innerHTML;
@@ -989,11 +807,6 @@ Kittaya Kanchanobhas
 
       document.getElementById("totalQ").innerHTML = sumQTYFinal;
 
-
-
-
-
-
       var VAT7Update = ((subTotalUpdate + secondTotalNumber + thirdTotalNumber) * 0.03);
 
       document.getElementById("vat").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + VAT7Update.toFixed(2);
@@ -1002,8 +815,6 @@ Kittaya Kanchanobhas
 
       document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdate.toFixed(2);
     }
-
-
 
 
     function myLicenseFunction() {
@@ -1036,12 +847,6 @@ Kittaya Kanchanobhas
       var finalTotalUpdateLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) + VAT7UpdateLicense);
 
       document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdateLicense.toFixed(2);
-
-
-
-
-
-
     }
 
 
@@ -1076,12 +881,6 @@ Kittaya Kanchanobhas
       var finalTotalUpdateSSLicense = ((firstTotalNumber + secondTotalNumber + thirdTotalNumber) + VAT7UpdateSSLicense);
 
       document.getElementById("finalTotal").innerHTML = `<i class="glyphicon glyphicon-bitcoin"></i>` + finalTotalUpdateSSLicense.toFixed(2);
-
-
-
-
-
-
     }
   </script>
 
